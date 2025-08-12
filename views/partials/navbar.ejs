@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/bookmark">
+      <span>Developer Bookmark Vault</span>
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav me-auto">
+        <a class="nav-link" href="/">
+          <i class="fas fa-home me-1"></i>Home
+        </a>
+        <a class="nav-link" href="/bookmark">
+          <i class="fas fa-bookmark me-1"></i>Bookmarks
+        </a>
+        <a class="nav-link" href="/bookmark/new">
+          <i class="fas fa-plus me-1"></i>New Bookmark
+        </a>
+        <a class="nav-link" href="/collections">
+            <i class="fas fa-folder-open me-1"></i>Collections
+        </a>
+      </div>
+
+    <% if(!currentUser){ %>
+        <div class="navbar-nav">
+            <a href="/login" class="nav-link">
+              <i class="fas fa-user me-1"></i>Login
+            </a>
+            <a href="/signup" class="nav-link">
+              <i class="fas fa-user-plus me-1"></i>Sign Up
+            </a>
+        </div>
+      <% }else{ %>
+        <a href="/user/info"> <span class="m-3 opacity-50"><%= currentUser.username %></span> </a>
+        <a href="/logout" class="btn btn-danger">Logout</a>
+        <% } %>
+    </div>
+  </div>
+</nav>

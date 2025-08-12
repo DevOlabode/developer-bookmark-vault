@@ -1,0 +1,50 @@
+<%- layout('./layout/boilerplate.ejs') %>
+
+<div class="container mt-4">
+  <h3 class="text-center mb-4"> <%= collection.name %> Bookmarks </h3>
+  <div class="d-flex justify-content-center">
+        <a href="/collections/<%= collection._id %>/bookmarks/new" class="btn btn-primary mb-4">Add Bookmark</a>
+
+        <form action="/collections/<%= collection._id %>?_method=delete" method="post">
+                  <button class="btn btn-danger mb-4 ms-4">Delete Collection</button>
+        </form>
+
+        <a href="/collections/<%= collection._id %>/edit" class="btn btn-warning  mb-4 ms-4">Edit Collection</a>
+        <a href="/collections" class="btn btn-secondary  mb-4 ms-4">Back</a>
+    </div>
+
+    <% if(collection.bookmarks.length === 0){ %>
+     <div class="text-center mt-5">
+      <i class="fas fa-bookmark fa-3x text-muted mb-3"></i>
+      <h4 class="text-muted">No bookmarks yet</h4>
+      <p class="text-muted">Add Bookmarks to your collection</p>
+    </div>
+        <% }else{ %>
+            <ul class="list-group">
+                <% for(let bookmark of collection.bookmarks){ %>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <i class="fas fa-bookmark text-primary me-3"></i>
+            <a href="/collections/<%= collection._id %>/bookmarks/<%= bookmark._id %>" class="text-decoration-none text-dark fw-bold">
+              <%= bookmark.title %>
+            </a>
+            <span class="badge bg-secondary ms-2"><%= bookmark.category %></span>
+          </div>
+          <div class="d-flex gap-2">
+            <a href="/collections/<%= collection._id %>/bookmarks/<%= bookmark._id %>" class="btn btn-sm btn-outline-primary">
+              <i class="fas fa-eye"></i>
+            </a>
+            <a href="/collections/<%= collection._id %>/bookmarks/<%= bookmark._id %>/edit" class="btn btn-sm btn-outline-warning">
+              <i class="fas fa-edit"></i>
+            </a>
+            <form action="/collections/<%= collection._id %>/bookmarks/<%= bookmark._id %>?_method=delete" method="POST" style="display: inline;">
+              <button type="submit" class="btn btn-sm btn-outline-danger">
+                <i class="fas fa-trash"></i>
+              </button>
+            </form>
+          </div>
+        </li>
+                    <% } %>
+            </ul>
+            <% } %>
+</div>
