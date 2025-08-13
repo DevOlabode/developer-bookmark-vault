@@ -16,7 +16,7 @@ module.exports.signUp = async(req, res)=>{
             if(err) return next(err)
             
         req.flash('Welcome to Developer Bookmarks Vault');
-        res.redirect('/bookmark')
+        res.redirect('/')
         })
     }catch(err){
         req.flash('error', err.message);
