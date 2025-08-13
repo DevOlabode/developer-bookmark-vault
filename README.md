@@ -31,7 +31,6 @@ A full-stack web application designed specifically for developers to save, organ
 - Create, read, update, and delete bookmarks
 - Rich bookmark details (title, URL, category, tags, notes)
 - User-specific bookmark organization
-- Quick search and filtering capabilities
 
 ### 📁 **Collections System**
 - Organize bookmarks into custom collections
