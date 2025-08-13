@@ -1,7 +1,6 @@
 if (process.env.NODE_ENV !== "production") {
-  require("dotenv").config();
+    require('dotenv').config();
 }
-
 
 const express = require('express');
 const app = express();
@@ -20,16 +19,12 @@ const ExpressError = require('./utils/expressError');
 const bookmarkRoutes = require('./routes/bookmark');
 const collectionRoutes = require('./routes/collections');
 const collectionBookmarksRoutes = require('./routes/collectionBookmarks');
-const MongoStore = require('connect-mongo')
+
+const MongoDBStore = require("connect-mongo");
+
 const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/developerBookmarks';
 
-// process.env.DB_URL
-
-mongoose.connect(dbUrl, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
-
+mongoose.connect(dbUrl);
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, "Connection error"));
@@ -43,30 +38,27 @@ app.engine('ejs', ejsMate);
 
 app.use(methodOverride('_method'));
 
-const secret = process.env.SECRET || 'secret';
+const secret = process.env.SECRET || 'thisshouldbeabettersecret!';
 
-const store = MongoStore.create({
+const store = MongoDBStore.create({
     mongoUrl: dbUrl,
-    touchAfter: 24 * 60 * 60,
     secret,
-    crypto: {
-        secret
-    }
+    touchAfter: 24 * 60 * 60
 });
 
-store.on('error', function(e){
-    console.log('Session store error', e)
-});
+store.on("error", function (e) {
+    console.log("SESSION STORE ERROR", e)
+})
 
 const sessionConfig = {
     store,
     secret,
-    resave : false,
-    saveUninitialized : false,
-    Cookie : {
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
         httpOnly: true,
-        expires : Date.now() + 1000 * 60 * 60 * 24 * 7, 
-        maxAge: 1000 * 60 * 60 * 24 * 7 
+        expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
+        maxAge: 1000 * 60 * 60 * 24 * 7
     }
 };
 
@@ -119,4 +111,3 @@ app.use((err, req, res, next)=>{
 app.listen(3000, ()=>{
     console.log('App is listening on PORT 3000')
 });
-
