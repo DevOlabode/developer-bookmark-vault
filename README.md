@@ -103,7 +103,6 @@ A full-stack web application designed specifically for developers to save, organ
 1. **Clone the repository**
    ```bash
    git clone https://github.com/DevOlabode/developer-bookmark-vault.git
-   cd developer-bookmark-vault
    ```
 
 2. **Install dependencies**
