@@ -15,7 +15,7 @@ module.exports.signUp = async(req, res)=>{
         req.login(registeredUser, (err) =>{
             if(err) return next(err)
             
-        req.flash('Welcome to Developer Bookmarks Vault');
+        req.flash('success','Welcome to Developer Bookmarks Vault');
         res.redirect('/')
         })
     }catch(err){
@@ -38,6 +38,7 @@ module.exports.logout = async(req, res)=>{
     req.logout(function(err){
         if(err) return next(err)
 });
+
 
     req.flash('success', 'Logged out your account');
     res.redirect('/');
