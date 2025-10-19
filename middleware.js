@@ -43,3 +43,10 @@ module.exports.loginAuthenticate = passport.authenticate('local', {
     failureFlash : true,
     failureRedirect : '/login'
 });
+
+module.exports.redirectIfLoggedIn = (req, res, next)=>{
+    if (req.isAuthenticated()) {
+        return res.redirect('/');
+    }
+    next();
+}
