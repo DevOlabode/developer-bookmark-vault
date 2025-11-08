@@ -1,4 +1,4 @@
-# 🚀 Developer Bookmark Vault
+# Developer Bookmark Vault
 
 > **Your Personal Knowledge Management System for Development Resources**
 
@@ -9,7 +9,7 @@ A full-stack web application designed specifically for developers to save, organ
 ![Express](https://img.shields.io/badge/express-5.x-blue.svg)
 ![MongoDB](https://img.shields.io/badge/mongodb-5.x-green.svg)
 
-## 📋 Table of Contents
+##  Table of Contents
 - [Features](#-features)
 - [Demo](#-demo)
 - [Tech Stack](#-tech-stack)
@@ -19,15 +19,15 @@ A full-stack web application designed specifically for developers to save, organ
 - [Contributing](#-contributing)
 - [License](#-license)
 
-## ✨ Features
+##  Features
 
-### 🔐 **User Management**
+###  **User Management**
 - Secure user registration and authentication
 - Password hashing with bcrypt
 - Session management with Passport.js
 - User profile management
 
-### 📚 **Bookmark Management**
+###  **Bookmark Management**
 - Create, read, update, and delete bookmarks
 - Rich bookmark details (title, URL, category, tags, notes)
 - User-specific bookmark organization
