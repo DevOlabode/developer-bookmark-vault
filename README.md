@@ -9,16 +9,6 @@ A full-stack web application designed specifically for developers to save, organ
 ![Express](https://img.shields.io/badge/express-5.x-blue.svg)
 ![MongoDB](https://img.shields.io/badge/mongodb-5.x-green.svg)
 
-##  Table of Contents
-- [Features](#-features)
-- [Demo](#-demo)
-- [Tech Stack](#-tech-stack)
-- [Getting Started](#-getting-started)
-- [Project Structure](#-project-structure)
-- [API Endpoints](#-api-endpoints)
-- [Contributing](#-contributing)
-- [License](#-license)
-
 ##  Features
 
 ###  **User Management**
@@ -58,12 +48,6 @@ A full-stack web application designed specifically for developers to save, organ
 
 ##  Live Demo
 [Live Demo](https://developer-bookmark-vault-5.onrender.com/)
-
-### Screenshots
-![Alt text](screenshot/4.png)
-![Alt text](screenshot/3.png)
-![Alt text](screenshot/2.png)
-![Alt text](screenshot/1.png)
 
 ## Tech Stack
 
