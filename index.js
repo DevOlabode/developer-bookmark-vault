@@ -26,8 +26,6 @@ app.engine('ejs', ejsMate);
 
 app.use(methodOverride('_method'));
 
-session.MemoryStore.prototype._emitWarning = () => {};
-
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(express.urlencoded({ extended: true }));

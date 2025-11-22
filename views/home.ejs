@@ -139,7 +139,8 @@
 </section>
 
 <!-- CTA Section -->
-<section class="cta-section">
+<% if(!currentUser){ %>
+  <section class="cta-section">
   <div class="container">
     <div class="cta-content">
       <h2>Ready to Organize Your Development Resources?</h2>
@@ -149,11 +150,8 @@
           <i class="fas fa-rocket"></i>
           Get Started Free
         </a>
-        <a href="/bookmark" class="btn btn-outline-light btn-lg">
-          <i class="fas fa-play"></i>
-          Take a Tour
-        </a>
       </div>
     </div>
   </div>
 </section>
+  <% } %>
