@@ -7,7 +7,7 @@ const {loginAuthenticate, storeReturnTo, isLoggedIn, redirectIfLoggedIn} = requi
 
 
 router.route('/signup')
-    .get(user.signUpForm)
+    .get(redirectIfLoggedIn, user.signUpForm)
     .post(storeReturnTo, catchAsync(user.signUp))
 
 router.route('/login')
