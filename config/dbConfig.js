@@ -1,4 +1,4 @@
-const dbUrl = process.env.DB_URI || `mongodb://localhost:27017/bookmarkDB`
+const dbUrl = process.env.MONGO_URI;
 const mongoose = require('mongoose');
 
 const connectDB = async () => {
