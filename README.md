@@ -1,4 +1,4 @@
-# 🚀 Developer Bookmark Vault
+# Developer Bookmark Vault
 
 > **Your Personal Knowledge Management System for Development Resources**
 
@@ -9,63 +9,50 @@ A full-stack web application designed specifically for developers to save, organ
 ![Express](https://img.shields.io/badge/express-5.x-blue.svg)
 ![MongoDB](https://img.shields.io/badge/mongodb-5.x-green.svg)
 
-## 📋 Table of Contents
-- [Features](#-features)
-- [Demo](#-demo)
-- [Tech Stack](#-tech-stack)
-- [Getting Started](#-getting-started)
-- [Project Structure](#-project-structure)
-- [API Endpoints](#-api-endpoints)
-- [Contributing](#-contributing)
-- [License](#-license)
+##  Features
 
-## ✨ Features
-
-### 🔐 **User Management**
+###  **User Management**
 - Secure user registration and authentication
 - Password hashing with bcrypt
 - Session management with Passport.js
 - User profile management
 
-### 📚 **Bookmark Management**
+###  **Bookmark Management**
 - Create, read, update, and delete bookmarks
 - Rich bookmark details (title, URL, category, tags, notes)
 - User-specific bookmark organization
-- Quick search and filtering capabilities
 
-### 📁 **Collections System**
+###  **Collections System**
 - Organize bookmarks into custom collections
 - Collection descriptions and metadata
 - Easy bookmark-to-collection assignment
 - Collection-based browsing
 
-### 🏷️ **Tagging & Categorization**
+###  **Tagging & Categorization**
 - Custom tags for flexible organization
 - Category-based filtering
 - Tag cloud visualization
 - Advanced search by tags and categories
 
-### 📱 **Responsive Design**
+###  **Responsive Design**
 - Mobile-first responsive design
 - Bootstrap 5 framework
 - Cross-browser compatibility
 - Touch-friendly interface
 
-### 🔔 **User Experience**
+###  **User Experience**
 - Flash messages for user feedback
 - Intuitive navigation
 - Loading states and error handling
 - Clean, modern UI
 
-## 🎯 Demo
+##  Live Demo
+[Live Demo](https://developer-bookmark-vault-5.onrender.com/) 
+## Demo Account 
+- **Username** - ola
+- **Password** - ola
 
-### Screenshots
-*Coming soon...*
-
-### Live Demo
-*Coming soon...*
-
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### **Backend**
 - **Node.js** - JavaScript runtime
@@ -88,7 +75,7 @@ A full-stack web application designed specifically for developers to save, organ
 - **ESLint** - Code linting
 - **Prettier** - Code formatting
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 - Node.js (v14.0.0 or higher)
@@ -99,8 +86,7 @@ A full-stack web application designed specifically for developers to save, organ
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/developer-bookmark-vault.git
-   cd developer-bookmark-vault
+   git clone https://github.com/DevOlabode/developer-bookmark-vault.git
    ```
 
 2. **Install dependencies**
@@ -144,32 +130,32 @@ A full-stack web application designed specifically for developers to save, organ
 6. **Access the application**
    Open your browser and navigate to `http://localhost:3000`
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 developer-bookmark-vault/
-├── 📁 controllers/          # Route controllers
+├──  controllers/          # Route controllers
 │   ├── bookmarks.js          # Bookmark CRUD operations
 │   ├── collections.js        # Collection management
 │   ├── collectionBookmarks.js # Collection-bookmark relationships
 │   └── user.js              # User management
-├── 📁 models/               # Database models
+├──  models/               # Database models
 │   ├── bookmark.js          # Bookmark schema
 │   ├── collection.js        # Collection schema
 │   └── user.js              # User schema
-├── 📁 routes/               # Express routes
+├──  routes/               # Express routes
 │   ├── bookmark.js          # Bookmark routes
 │   ├── collections.js       # Collection routes
 │   ├── collectionBookmarks.js # Collection-bookmark routes
 │   └── user.js              # User authentication routes
-├── 📁 views/                # EJS templates
+├──  views/                # EJS templates
 │   ├── bookmark/            # Bookmark views
 │   ├── collections/         # Collection views
 │   ├── collectionBookmarks/ # Collection-bookmark views
 │   ├── user/                # User views
 │   ├── partials/            # Reusable components
 │   └── layout/              # Layout templates
-├── 📁 public/               # Static assets
+├──  public/               # Static assets
 │   ├── css/                 # Stylesheets
 │   ├── js/                  # Client-side JavaScript
 │   └── images/              # Images and icons
