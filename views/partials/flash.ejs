@@ -1,39 +1,20 @@
-<% if(success && success.length){ %>
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <i class="fas fa-check-circle me-2"></i>
-        <%= success %>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
-            <i class="fas fa-times"></i>
-        </button>
-    </div>
+<% if(success && success.length > 0){ %>
+<div class="container mt-4">
+  <% for(let msg of success){ %>
+  <div class="alert alert-success" role="alert">
+    <i class="fas fa-check-circle"></i>
+    <span><%= msg %></span>
+  </div>
+  <% } %>
+</div>
 <% } %>
-
-<% if(error && error.length){ %>
-    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        <i class="fas fa-exclamation-circle me-2"></i>
-        <%= error %>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
-            <i class="fas fa-times"></i>
-        </button>
-    </div>
-<% } %>
-
-<% if(warning && warning.length){ %>
-    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-        <i class="fas fa-exclamation-triangle me-2"></i>
-        <%= warning %>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
-            <i class="fas fa-times"></i>
-        </button>
-    </div>
-<% } %>
-
-<% if(info && info.length){ %>
-    <div class="alert alert-info alert-dismissible fade show" role="alert">
-        <i class="fas fa-info-circle me-2"></i>
-        <%= info %>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
-            <i class="fas fa-times"></i>
-        </button>
-    </div>
+<% if(error && error.length > 0){ %>
+<div class="container mt-4">
+  <% for(let msg of error){ %>
+  <div class="alert alert-danger" role="alert">
+    <i class="fas fa-exclamation-circle"></i>
+    <span><%= msg %></span>
+  </div>
+  <% } %>
+</div>
 <% } %>
